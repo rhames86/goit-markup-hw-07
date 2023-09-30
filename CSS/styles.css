@@ -22,14 +22,8 @@ a:active {
 ul {
   list-style: none;
 }
-.p-0 {
-  margin: 0px;
-}
-.p-1 {
-  margin-left: 93px;
-}
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: auto;
@@ -39,36 +33,47 @@ ul {
 .list {
   list-style: none;
 }
-.border-bottom {
+.header--bottom-border {
   border-bottom: #ececec 1px solid;
 }
-.navigation__container {
-  width: 1200px;
+.navigation {
+  max-width: 1200px;
   display: flex;
   background-color: #ffffff;
   padding-left: 5px;
 }
-.pv-main {
+.navigation--padding {
+  padding: 24px 0px 25px 0px;
+}
+.header__logo {
   padding: 24px 0px 25px 0px;
 }
 .pv-navigavion {
   padding-left: 93px;
 }
-.pv-contacts {
-  padding-left: 284px;
-}
-.hero__navegation {
+.header {
+  max-width: auto;
+  background-color: #ffffff;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  float: none;
   display: flex;
-  column-gap: 50px;
+}
+.header--padding-contacts {
+  padding-left: 306px;
+}
+.navegation__list {
+  display: flex;
+  column-gap: 56px;
   justify-content: flex-start;
   align-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
 }
-.borde-activo {
-  color: var(--blue-text);
-}
-
-.borde-activo::after {
+.header__navigation--border-active::after {
   display: block;
   content: '';
   width: auto;
@@ -76,9 +81,9 @@ ul {
   border-radius: 2px;
   background-color: var(--blue-text);
   position: relative;
-  top: 115%;
-  cursor: auto;
-  bottom: -1px;
+  top: 100%;
+  bottom: -28px;
+  cursor: pointer;
 }
 
 .p-0 {
@@ -87,10 +92,7 @@ ul {
 .m-0 {
   margin: 0%;
 }
-.header-menu.current {
-  color: var(--blue);
-}
-.logo-blue {
+.logo-top {
   color: var(--blue);
   text-align: right;
   font-family: 'Raleway';
@@ -133,16 +135,16 @@ ul {
 .link-nav:focus {
   color: var(--blue);
 }
-.header-logo {
+.header__logo--text-padding {
   padding-left: 0px;
 }
-.hero__contact {
+.header__contact {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background-color: #ffffff;
 }
-.header-email {
+.header__email {
   font-family: 'Roboto', sans-serif;
   color: #757575;
   font-size: 14px;
@@ -153,7 +155,7 @@ ul {
   cursor: pointer;
   background-color: #ffffff;
 }
-.header-email:hover .icon-sobre {
+.header__email:hover .icon-sobre {
   color: var(--blue);
   fill: var(--blue);
 }
@@ -247,23 +249,8 @@ ul {
   color: #2196f3;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
-.container-nav {
-  width: 1200px;
-  background-color: #ffffff;
-  justify-content: space-between;
-  display: flex;
-}
-.container-header {
-  width: auto;
-  background-color: #ffffff;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  display: flex;
-}
-.container-logo {
-  width: auto;
-  background-color: #ffffff;
+.header__logo--text {
+  /* background-color: #ec0b0b; */
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -279,8 +266,10 @@ ul {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  letter-spacing: 0.5px;
-  padding: 10px 32px;
+  letter-spacing: 0.06em;
+  padding: 0px;
+  width: 200px;
+  height: 50px;
 }
 .boton-solicitud:hover,
 .boton-solicitud:focus {
@@ -293,7 +282,7 @@ ul {
   border-radius: 4px;
   cursor: pointer;
   box-shadow: #000000 0px 4px 4px 0px;
-  padding: 10px 32px;
+  padding: 0px;
 }
 .slogan-top {
   color: white;
@@ -312,7 +301,7 @@ ul {
   margin-inline-start: 0px;
 }
 .tamano-texto {
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 44px;
   font-weight: 900;
   line-height: 60px;
@@ -424,6 +413,8 @@ ul {
 .redes-footer-container {
   justify-content: flex-start;
   align-content: flex-start;
+  flex-wrap: wrap;
+  display: block;
   /* background-color: #00a748; */
 }
 /* fin iconos footer aqui */
@@ -437,13 +428,24 @@ ul {
   width: 20px;
   height: 20px;
 }
+.description {
+  width: auto;
+  /* background-color: #2196f3; */
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  margin: 0px;
+  display: flex;
+}
 .descripcion-bloque {
   width: 1200px;
+  /* flex-basis: calc((100%-30px * 3) / 4); */
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding-top: 95px;
+  padding: 95px 0px 0px 0px;
 }
 .descripcion-titulos {
   font-family: 'roboto', Arial, Helvetica, sans-serif;
@@ -484,9 +486,12 @@ ul {
   background: #ffffff;
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   padding-bottom: 94px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .services-item {
   position: relative;
@@ -518,14 +523,20 @@ ul {
   letter-spacing: 3%;
   color: #212121;
   text-align: center;
+  padding-bottom: 50px;
 }
 .container-equipo {
   width: auto;
   justify-content: center;
+  justify-items: center;
   background-color: #f5f4fa;
   flex-basis: content;
+  display: block;
+  flex-wrap: wrap;
   padding-bottom: 94px;
   padding-top: 94px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .lista-img-equipo {
   background: #f5f4fa;
@@ -534,7 +545,10 @@ ul {
   display: flex;
   gap: 30px;
   justify-content: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-wrap: wrap;
 }
 .container-cards {
   width: 270px;
@@ -632,15 +646,16 @@ ul {
 
 /* aqui comienza el codigo seccion cliente */
 .section {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .container-clients {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: auto;
+  /* padding-left: 15px;
+  padding-right: 15px; */
   padding-bottom: 151px;
-  margin: auto;
+  /* margin: auto; */
+  box-sizing: border-box;
 }
 .clients-title {
   font-weight: 700;
@@ -658,7 +673,10 @@ ul {
   justify-items: center;
   align-items: center;
   align-content: center;
-  padding-top: 44px;
+  padding-top: 60px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 .clients-item {
   width: 170px;
@@ -731,36 +749,42 @@ ul {
   color: #ffffff;
 }
 .footer-container {
-  width: auto;
+  max-width: auto;
   background-color: #2f303a;
   justify-content: center;
+  justify-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
+  flex-wrap: wrap;
 }
 .footer {
   width: 1200px;
   background-color: #2f303a;
   gap: 70px;
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .logo-footer {
   color: #2196f3;
-  font-weight: normal;
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway;
   font-size: 26px;
+  font-weight: 700;
   line-height: 31px;
-  letter-spacing: 0.04em;
-  width: 1200px;
-  padding: 40px;
+  letter-spacing: 0.03em;
+  text-align: left;
+
+  padding: 0px;
 }
 .container-contact {
   max-width: 237px;
-  padding-top: 12px;
+  /* padding-top: 12px; */
   /* line-height: 10px; */
   /* background-color: #00a748; */
-  /* flex-direction: column;
-  display: flex; */
+  /* flex-direction: column; */
+  display: block;
+  flex-wrap: wrap;
 }
 .email-footer {
   font-family: 'Roboto', sans-serif;
@@ -800,12 +824,16 @@ ul {
   text-align: left;
   color: #ffffff;
 }
+.footer__address--padding {
+  padding: 0px;
+}
 .botones-portafolio {
   display: flex;
   gap: 15px;
   justify-content: center;
   background-color: #ffffff;
-  margin-top: 106px;
+  padding-top: 106px;
+  flex-wrap: wrap;
 }
 .boton-top-portafolio {
   /* width: 128px;
@@ -868,7 +896,7 @@ ul {
   align-content: center;
   display: flex;
   padding-bottom: 94px;
-  padding-top: 94px;
+  padding-top: 50px;
 }
 
 .nombre-de-producto {
@@ -1251,6 +1279,7 @@ ul {
   padding-left: 16px;
   box-shadow: 0px 4px 4px 0px #00000026;
   background-color: #2f303a;
+  /* margin-right: 12px; */
 }
 .input-email-suscribase:focus-within {
   background-color: #2f303a;
@@ -1259,6 +1288,7 @@ ul {
 .container-email {
   gap: 12px;
   display: inline-flex;
+  flex-wrap: wrap;
 }
 .suscribase-footer-btn {
   width: 200px;
@@ -1290,11 +1320,11 @@ ul {
   padding: 10px 72px 10px 39px;
 }
 .suscribase-div {
-  width: 570px;
-  justify-content: flex;
-  align-content: flex;
+  max-width: 570px;
+  justify-content: center;
+  align-content: center;
   border: none;
-  display: inline-block;
+  display: block;
 }
 .svg-suscribir {
   position: absolute;

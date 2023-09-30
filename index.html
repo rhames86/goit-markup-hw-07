@@ -17,18 +17,18 @@
     />
   </head>
   <body>
-    <header class="container-header border-bottom">
-      <nav class="container navigation__container">
-        <ul class="list pv-main m-0">
-          <li class="container-logo">
-            <a href="./index.html" class="header-logo link current">
-              <span class="logo-blue"> WebStudio</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="hero__navegation pv-main pv-navigavion m-0">
-          <li class="link-nav">
-            <a href="./index.html" class="header-menu current link-nav borde-activo"> Estudio</a>
+    <header class="header header--bottom-border m-0">
+      <ul class="header__logo list m-0">
+        <li class="header__logo--text">
+          <a href="./index.html" class="header__logo--text-padding link current">
+            <span class="logo-top"> WebStudio</span>
+          </a>
+        </li>
+      </ul>
+      <nav class="navigation navigation--padding p-0 m-0">
+        <ul class="navegation__list pv-navigavion m-0">
+          <li>
+            <a href="./index.html" class="header__navigation-current link-nav header__navigation--border-active">Estudio</a>
           </li>
           <li>
             <a href="./Portafolio.html" class="link-nav">Portafolio</a>
@@ -37,16 +37,15 @@
             <a href="#" class="link-nav">Contacto</a>
           </li>
         </ul>
-        <ul class="hero__contact list pv-contacts m-0">
-          <li class="header-email link">
-            <svg class="icon-sobre header-email link">
+        <ul class="header__contact list header--padding-contacts m-0">
+          <li class="header__email link">
+            <svg class="icon-sobre header__email link">
               <use href="./Images/icons/symbol-defs.svg#icon-sobre"></use>
             </svg>
-            <a class="header-email gap-email link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
+            <a class="header__email gap-email link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a>
           </li>
-          <li class="p-0 header-tel">
+          <li class="header-tel">
             <svg class="icon-tel header-tel link">
               <use href="./Images/icons/symbol-defs.svg#icon-telefono"></use>
             </svg>
@@ -62,8 +61,8 @@
           <button  data-modal-open type="button" class="boton-solicitud">Solicite nuestro servicio</button>
         </div>
       </section>
-      <section id="main__descripcion">
-        <ul class="descripcion-bloque container">
+      <section id="description" class="description">
+        <ul class="descripcion-bloque description">
           <li>
             <div class="icons-bg">
               <svg class="bg-icon ventajas-icon">
@@ -132,8 +131,8 @@
         </ul>
       </section>
       <section id="main__Equipo" class="container-equipo">
-        <h2 class="equipo">Nuestro Equipo</h2>
-        <ul class="lista-img-equipo container">
+        <h2 class="equipo m-0">Nuestro Equipo</h2>
+        <ul class="lista-img-equipo p-0 m-0">
           <li class="container-cards">
             <img
               class="imagen-equipo"
@@ -281,9 +280,9 @@
           </li>
         </ul>
       </section>
-      <section id="clients" class="container-clients section">
+      <section id="clients" class="container-clients section m-0">
         <h2 class="clients-title">Clientes Regulares</h2>
-        <ul class="clients-list p-0">
+        <ul class="clients-list p-0 m-0">
           <li class="clients-item">
             <a href="" class="clients-icon-left link-clientes o-0">
               <svg width="41" height="47">
@@ -334,7 +333,7 @@
       <address class="footer">
         <div class="container-contact">
           <a href="#" class="logo-footer o-0">WebStudio</a>
-          <ul>
+          <ul class="footer__address--padding">
             <li>
               <a href="#" class="direccion">Calz. Ticomán 500, Ciudad de México, CDMX, México</a>
             </li>
@@ -384,8 +383,7 @@
                 class="input-email-suscribase"
                 type="email"
                 id="email"
-                placeholder="Correo electrónico"
-              />
+                placeholder="Correo electrónico"/>
               <button type="button" class="suscribase-footer-btn">
                 Suscríbase
                 <svg class="svg-suscribir" width="24px" height="24px" class="m">

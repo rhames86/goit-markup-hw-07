@@ -17,21 +17,21 @@
     />
   </head>
   <body>
-    <header class="container-header border-bottom">
-      <nav class="container navigation__container">
+    <header class="header header--bottom-border m-0">
+      <nav class="header__navigation m-0">
         <ul class="list pv-main m-0">
-          <li class="container-logo">
+          <li class="logo__container">
             <a href="./index.html" class="header-logo link current">
               <span class="logo-blue"> WebStudio</span>
             </a>
           </li>
         </ul>
-        <ul class="hero__navegation pv-main pv-navigavion m-0">
+        <ul class="header__navegation pv-main pv-navigavion m-0">
           <li>
-            <a href="./index.html" class="link-nav"> Estudio</a>
+            <a href="./index.html" class="link-nav">Estudio</a>
           </li>
           <li>
-            <a href="./Portafolio.html" class="header-menu current link-nav borde-activo"
+            <a href="./Portafolio.html" class="link-nav current link-nav borde-activo"
               >Portafolio</a
             >
           </li>
@@ -39,7 +39,7 @@
             <a href="#" class="link-nav">Contacto</a>
           </li>
         </ul>
-        <ul class="hero__contact list pv-contacts m-0">
+        <ul class="header__contact list pv-contacts m-0">
           <li class="header-email link">
             <svg class="icon-sobre header-email link">
               <use href="./Images/icons/symbol-defs.svg#icon-sobre"></use>
@@ -58,7 +58,7 @@
       </nav>
     </header>
     <main>
-      <ul class="botones-portafolio">
+      <ul class="botones-portafolio m-0">
         <li>
           <button type="button" class="boton-top-portafolio boton-Todo">Todo</button>
         </li>
@@ -210,8 +210,8 @@
     <footer id="contacts-footer" class="footer-container">
       <address class="footer">
         <div class="container-contact">
-          <a href="#" class="logo-footer">WebStudio</a>
-          <ul>
+          <a href="#" class="logo-footer o-0">WebStudio</a>
+          <ul class="footer__address--padding">
             <li>
               <a href="#" class="direccion">Calz. Ticomán 500, Ciudad de México, CDMX, México</a>
             </li>
@@ -254,7 +254,7 @@
             </li>
           </ul>
         </div>
-        <div class="suscribase-div">
+        <form class="suscribase-div">
           <h3 class="suscribase-footer m-0">Suscríbase al boletín informativo</h3>
           <div class="container-email">
             <input
@@ -270,7 +270,7 @@
               </svg>
             </button>
           </div>
-        </div>
+        </form>
       </address>
     </footer>
   </body>
